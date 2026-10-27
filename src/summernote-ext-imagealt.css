@@ -82,3 +82,11 @@
 .note-imagealt-icon {
   vertical-align: -.125em;
 }
+
+/* A site's theme may restyle every label (uppercase, tracked out); the
+   dialog keeps its own. */
+.note-imagealt-dialog label,
+.note-imagealt-dialog legend {
+  text-transform: none;
+  letter-spacing: normal;
+}
