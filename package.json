@@ -1,0 +1,42 @@
+{
+  "name": "summernote-ext-imagealt",
+  "version": "0.1.0",
+  "description": "Alt text for images in Summernote: describe every picture, or mark it decorative on purpose.",
+  "keywords": [
+    "summernote",
+    "summernote-plugin",
+    "wysiwyg",
+    "accessibility",
+    "alt-text",
+    "a11y",
+    "wcag"
+  ],
+  "license": "MIT",
+  "author": "Kevin Bruce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbruce/summernote-ext-imagealt.git"
+  },
+  "homepage": "https://github.com/kevinbruce/summernote-ext-imagealt#readme",
+  "bugs": "https://github.com/kevinbruce/summernote-ext-imagealt/issues",
+  "main": "src/summernote-ext-imagealt.js",
+  "style": "src/summernote-ext-imagealt.css",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "peerDependencies": {
+    "jquery": ">=3.0.0",
+    "summernote": ">=0.8.18"
+  },
+  "devDependencies": {
+    "jquery": "^3.7.1",
+    "jsdom": "^24.1.0",
+    "summernote": "0.9.1",
+    "vitest": "^1.6.0"
+  },
+  "scripts": {
+    "test": "vitest run"
+  }
+}

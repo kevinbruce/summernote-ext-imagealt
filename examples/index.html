@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>summernote-ext-imagealt demo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.9.1/dist/summernote-lite.min.css"
+        integrity="sha384-ujmZ40iFsxEHUq6QCcxwjfGi1W9lk9SkvB4Kz6ZCDGh5G1LF41x7qOfDJnBo82CS" crossorigin="anonymous">
+  <link rel="stylesheet" href="../src/summernote-ext-imagealt.css">
+  <style>
+    body { max-width: 900px; margin: 32px auto; padding: 0 16px; font: 16px/1.5 system-ui, sans-serif; color: #1d2733; }
+  </style>
+</head>
+<body>
+  <h1>summernote-ext-imagealt</h1>
+  <p>Click the picture, then the accessibility button in its popover (or the toolbar).</p>
+
+  <div id="editor">
+    <p>A diagram of the bay, with no alt text yet:</p>
+    <p><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='120'%3E%3Crect width='320' height='120' fill='%23cfe8f3'/%3E%3Cpath d='M0 80 Q80 50 160 80 T320 80 V120 H0z' fill='%23006ea0'/%3E%3C/svg%3E"></p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"
+          integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.1/dist/summernote-lite.min.js"
+          integrity="sha384-PIcWJ29rkVSUGtsk8A9iQDkUN50LgPkoQkzKDBEgwZsyiCnqx/L7Y3JHT+aeKw86" crossorigin="anonymous"></script>
+  <script src="../src/summernote-ext-imagealt.js"></script>
+  <script>
+    $('#editor').summernote({
+      height: 240,
+      toolbar: [['insert', ['picture', 'imagealt']], ['view', ['codeview']]],
+      popover: {
+        image: [
+          ['resize', ['resizeFull', 'resizeHalf', 'resizeQuarter', 'resizeNone']],
+          ['float', ['floatLeft', 'floatRight', 'floatNone']],
+          ['imagealt', ['imagealt']],
+          ['remove', ['removeMedia']]
+        ]
+      }
+    });
+  </script>
+</body>
+</html>
